@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORMS</title>
+</head>
+<body>
+    <h1>HTML FORM</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <input type= "text" name="username" id="username" placeholder="Your Name"><br><br>
+
+            <input type="number" name="id number" id="id number" placeholder=" Your ID number"><br> <br>
+
+            <input type="email" name="email" id="email" placeholder="Your Email"><br><br>
+
+            <input type="password" name="password" id="password" placeholder="Your password"><br><br>
+
+            <input type="tel" name="telephone number" id="telephone number" placeholder=" Your Phone Number"><br><br>
+
+            <label for="DOB">Date Of Birth</label><br>
+            <input type="date" name="DOB" id="DOB">
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+            <label for="Your interests">Your Interests</label><br>
+            <input type="checkbox" name="Interests" id="Interests" value="F-ball">Football <br>
+            <input type="checkbox" name="Interests" id="Interests" value="V-ball">Volleyball <br>
+            <label for="Your Gender">Your Gender</label><br>
+            <input type="radio" name="Gender" id="Gender" value="M">Male <br>
+            <input type="radio" name="Gender" id="Gender" value="F">Female <br>
+            <input type="radio" name="Gender" id="Gender" value="NA">Rather Not Say<br><br>
+            <label for="Your Pic">Your Photo</label> <br>
+            <input type="file" name="Your Pic" id="Your Pic"><br><br>
+            <label for="Select Course">Select Your Course</label><br>
+            <select name="Select Course" id="Select Course">
+                <option value="DS">Data Science</option>
+                <option value="Uchawi" selected>Witchdoctrine</option>
+                <option value="CS">Cyber Security</option>
+                <option value="Web">Webdeveloping</option>
+                <option value="ML">Machine Learning</option>
+            </select>            
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+            <legend>Comment Section</legend>
+            <label for="Comment">Leave A Comment</label><br>
+            <textarea name="Comment" id="Comment" cols="35" rows="15"></textarea>
+        </fieldset>
+        <br><br>
+
+        <input type="submit" value="Make Application"><br><br>
+        <input type="reset" name="" id="" value="Clear Data">
+    </form>
+    <center>&copy;</center>
+</body>
+</html>
