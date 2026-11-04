@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="../static/files/css/bootstrap.css">
+</head>
+<body class="bg-secondary">
+    {% include 'navbar.html' %}  <span><a href="/" class="btn btn-success btn-xl">HOME</a></span>
+   
+    <div class="container">
+        <h4 class="text-info">{{message}}</h4>
+        <section class="row mt-3">
+            <!-- Section A -->
+            <div class="col-md-6">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <!-- Prouct Name -->
+                    <input type="text" name="product_name" placeholder="Product Name" class="form-control">
+                    <br>
+                    <!-- Prouct Description -->
+                    <textarea name="product_desc" cols="30" rows="5" placeholder="Product Description" class="form-control"></textarea>
+                    <br>
+                    <!-- Prouct Cost-->
+                    <input type="number" name="product_cost" placeholder="Product Cost" class="form-control">
+                    <br>
+                    <!-- Prouct Category-->
+                    <select name="product_category" class="form-control">
+                        <option value="Electronics">Electronics</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Accesories">Accesories</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Groceries">Groceries</option>
+                    </select>
+                    <br>
+                    <!-- Prouct Image Name -->
+                    <input type="file" name="product_image_name" class="form-control" placeholder="INput Product Image Here">
+                    <br>
+                    <!-- Submit Button -->
+                    <input type="submit" value="Upload Product" class="btn btn-info">
+                    <br>
+                </form>
+            </div>
+            <!-- Section B -->
+            <div class="col-md-6">
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
