@@ -1,0 +1,56 @@
+ <!-- NAVBAR -->
+ 
+ <section class="row">
+    <div class="col-md-12">
+       <nav class="navbar navbar-expand-md navbar-light btn-light p-3">
+               <a href="#" class="navbar-brand">Soko <b class="text-success">Garden</b></a>
+               <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                   <span class="navbar-toggler-icon"></span>
+              </button>
+               
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/" class="nav-item nav-link">Blog</a>
+                <a href="/" class="nav-item nav-link">About US</a>
+                <a href="/vendors" class="nav-item nav-link">Vendors</a>
+            </div>
+            <div class="ms-auto">
+
+                {% if session["key"] %}
+                <b class="text-primary">Welcome: {{session["key"]}}</b>
+                <!-- UPLOAD PRODUCTS -->
+                <a href="/upload" class="btn btn-warning btn-large">Sell Product</a>
+                <!-- LOGOUT OF THE SYSTEM -->
+                <a href="/logout" class="btn btn-secondary btn-large">LOGOUT</a>
+                {% else %}
+                <!-- LOGIN TO THE SYSTEM -->
+                <a href="/login" class="btn btn-danger btn-large">LOGIN</a>
+                {% if session["key"] %}
+                <b class="text-primary">Welcome: {{session["name"]}}</b>
+
+                <a href="/upload" class="btn btn-warning btn-large">Sell Product</a>
+                <!-- LOGOUT OF THE SYSTEM -->
+                <a href="/logout" class="btn btn-secondary btn-large">LOGOUT</a>
+                {% else %}
+                <!-- Login Vendor INTO THE SYSTEM -->
+                <a href="/vlogin" class="btn btn-info btn-large">Vendor LOGIN</a>
+                <!-- Vendor Registration -->
+                <a href="/vendors" class="nav-item nav-link">Vendors</a>
+                <!-- REGISTER INTO THE SYSTEM -->
+                <a href="/register" class="btn btn-primary btn-large">Register</a>
+                
+                {% endif %}
+
+            
+           
+                 <!--    TODO Logout-->
+            </div>
+
+        </div>
+       </nav>
+    </div>
+</section>
+
+
+
