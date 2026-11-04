@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+
+    <!-- css resources: styling -->
+    <link rel="stylesheet" href="../static/files/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/files/css/lightslider.css">
+    <link rel="stylesheet" href="../static/files/css/style.css">
+
+    <!-- javascript: actions on the page -->
+    <script src="../static/files/js/bootstrap.js"></script>
+    <script src="../static/files/js/jquery.js"></script>
+    <script src="../static/files/js/lightslider.js"></script>
+    <script src="../static/files/js/script.js"></script>
+
+</head>
+<body>
+    {%include 'navbar.html'%}
+    <br>
+    <div class="container">
+        <h5 class="text-primary">{{message}}</h5>
+        <h5 class="text-primary">{{warning}}</h5>
+        <h5 class="text-primary">{{success}}</h5>
+        <section class="row">
+            <div class="col-md-6 card shadow pt-2 pb-2">
+                <form action="/register" method="post" enctype="multipart/form-data">
+                    <input type="text" name="user_name" placeholder="Enter Username" class="form-control">
+                    <br>
+                    <input type="tel" name="phone" placeholder="Enter Phone +254xxxxxxxxx" class="form-control">
+                    <br>
+                    <input type="email" name="email" placeholder="Enter Email" class="form-control">
+                    <br>
+                    <input type="file" name="user_image_name" class="form-control">
+                    <br>
+                    <input type="password" name="password" placeholder="Enter password" class="form-control">
+                    <br>
+                    <input type="password" name="confirm" placeholder="Confirm password" class="form-control">
+                    <br>
+                    <input type="submit" value="Register" class="btn btn-primary">
+                </form>
+
+            </div>
+
+
+        </section>
+        <br>
+      
+    </div>
+    <br>
+
+    {%include 'footer.html'%}
+    
+</body>
+</html>

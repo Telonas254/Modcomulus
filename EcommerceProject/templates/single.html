@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single</title>
+     <!-- CSS resource files:link -->
+     <link rel="stylesheet" href="../static/files/css/bootstrap.css">
+     <link rel="stylesheet" href="../static/files/css/lightslider.css">
+     <link rel="stylesheet" href="../static/files/css/style.css">
+ 
+     <!-- js resources:script -->
+     <script src="../static/files/js/bootstrap.js"></script>
+     <script src="../static/files/js/jquery.js"></script> 
+     <script src="../static/files/js/lightslider.js"></script>   
+     <script src="../static/files/js/script.js"></script>
+    
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <br><br>
+    <div class="container">
+        <section class="row">
+            <!-- COLUMN 1 -->
+            <div class="col-md-3">
+                <img src="../static/images/{{single[5]}}" alt="" width="300px" height="350px" class="img-thumbnail shadow p-3">
+                <h4>{{single[1]}}</h4>
+                
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="col-md-8">
+                <p class="text-success" style="font-weight: 500px;">{{single[2]}}</p>
+                <h5 class="text-warning">KES {{single[3]}}</h5>
+                <b class="text-danger">Category: {{single[4]}}</b>
+                <br>
+                <span class="badge bg-warning">Offer Ongoing</span>
+                <br><br>
+                
+                <br><br>
+                {% if session["key"] %}
+                <!-- LOGED IN -->
+                <div class="card shadow p-5">
+                    <form action="/mpesa" method="post">
+                        <h5>Product Checkout</h5>
+                        <input type="tel" name="phone" placeholder="254xxxxxxxxx" class="form-control">
+                        <br>
+                        <input type="number" name="amount" value="{{single[3]}}" class="form-control" readonly>
+                        <br>
+                        <input type="submit" value="Lipa na  Mpesa" class="btn btn-success">
+                    </form>
+                </div>
+                {% else %}
+                <!-- NOT LOGED IN -->
+                <a href='/login' class="btn btn-dark">Sign In to Purchase {{single[1]}}</a>
+                {% endif %}
+                <br><br>
+              
+                
+            </div>
+        </section>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

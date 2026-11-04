@@ -1,0 +1,5 @@
+print("Welcome To Python Programming")
+print("Barack")
+print(17)
+print("Computer Science")
+print("Nanyuki High School")
