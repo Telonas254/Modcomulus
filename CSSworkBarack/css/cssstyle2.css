@@ -1,0 +1,37 @@
+body{
+    background-color: rgba(228, 115, 49, 0.767) ;
+}
+/* links */
+a{
+    color: azure;
+    background-color: rgba(8, 8, 224, 0.863);
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+p{
+    text-align: center;
+}
+/* heading and box model */
+h1{
+    text-align: center;
+    letter-spacing: 35px;
+    border: 6px solid rgba(212, 114, 22, 0.829);
+}
+
+/* lists and box model */
+ol{
+    display:block;
+    background-color: rgba(190, 210, 212, 0.815);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+li{
+    background-color: rgba(36, 33, 228, 0.89);
+    margin: 15px;
+    padding: 15px;
+    list-style: lower-alpha;
+}

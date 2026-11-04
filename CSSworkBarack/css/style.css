@@ -1,0 +1,76 @@
+body{
+    background-color: rgba(231, 231, 197, 0.842);
+}
+/* text styles */
+p{
+    text-align: center;
+    text-transform:uppercase;
+    text-decoration: line-through;
+    line-height: 2;
+}
+
+/* heading styles */
+h1{
+    text-align: center;
+    letter-spacing: 20px;
+    word-spacing: 20px;
+    text-shadow: 10px 10px 5px red;
+    
+}
+
+/* division: A way to section a webpage into different positions e.g;head,sidebar,footer,content. */
+
+
+div{
+   color: azure;
+    border:10px solid red;
+    background-color: black;
+
+    /* padding */
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+
+    /* margin */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 25px;
+}
+
+/* links */
+a{
+    color: azure;
+    background-color: rgb(0, 0, 0);
+    border: 5px solid black;
+    text-decoration: none;
+    padding: 10px;    
+    margin: 20px;
+    border-radius: 15px;
+    display: block;
+}
+
+a:hover{
+    background-color: aqua;
+    color: blueviolet;
+}
+
+
+/* links */
+ol{
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+li{
+    background-color: darkolivegreen;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 9px;
+    list-style-type:lower-alpha;
+}
+li:hover{
+    background-color: aqua;
+    color: blueviolet;
+}
